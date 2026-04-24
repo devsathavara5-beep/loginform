@@ -1,29 +1,79 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>login form</title>
+    <title>validation</title>
+    <style>
+        body
+        {
+            font-family: arial;
+            padding: 10px;
+            max-width: 300px;
+            margin: auto;
+        }
+        span
+        {
+            color: yellow;
+        }
+    </style>
 </head>
 <body>
-    <!-- username -->
-     <lable>Username</lable><br>
-     <input type="text"pleaceholder="enter username"><br><br>
-
-     <!-- email -->
-     <lable>email</lable><br>
-     <input type="text"pleaceholder="enter email"><br><br>
-
-     <!-- Password -->
-     <lable>Username</lable><br>
-     <input type="text"pleaceholder="enter password"><br><br>
-
-     <!-- mobile-no -->
-     <lable>Mobile-no</lable><br>
-     <input type="text"pleaceholder="enter mobile-no"><br><br>
-
-     <!-- Address -->
-     <lable>Address</lable><br>
-     <input type="text"pleaceholder="enter Address"><br><br>
-
-     <button onclick="Validation()">submit</button>
+    <h2>login <form action=""></form></h2>
+    <form id="hello"></form>
+    name: <input type="test" id="name"><br>
+    <span id="Namehello"></span><br>
+     email: <input type="test" id="email"><br>
+    <span id="emailhello"></span><br>
+     mobile: <input type="test" id="mobile"><br>
+    <span id="mobilehello"></span><br>
+     password: <input type="test" id="password"><br>
+    <span id="passwordhello"></span><br>
+     confirm password: <input type="test" id="confirm password"><br>
+    <span id="confirm passwordhello"></span><br>
+    </form>
+<script>
+    let name = document.getElementById("name");
+    let email = document.getElementById("email");
+    let mobile = document.getElementById("mobile");
+    let password = document.getElementById("password");
+    let confrimPassword = document.getElementById("confrimPassword");
+    name.addEventListener("input",function ()
+    {
+        document.getElementById("emailThis").innerText = 
+        name.value.length< 5 ? "name is write ":"";
+    });
+    email.addEventListener("input",function ()
+    {
+        document.getElementById("emailThis").innerText = 
+        email.value.includes("@") ? "": "this is a now";
+    });
+    mobile.addEventListener("input",function ()
+    {
+        let pattern = /^[0-5]{10}$/;
+        if(!pattern.test(mobile.value))
+        {
+            document.getElementById("mobileThis").innerText = 
+            "need 8 numbers";
+        }else
+        {
+            document.getElementById("mobileThis").innerText = "";
+        }
+    });
+    Password.addEventListener("input",function ()
+    {
+        document.getElementById("passwordThis").innerText = 
+        password.value.length< 10 ? "need 10 character":"";
+    });
+    confirmPassword.addEventListener("input",function ()
+    {
+        if (confrimPassword.value !== Password.value)
+    {
+        document.getElementById("confrimPasswordThis").innerText = 
+        "not equal";
+    }else 
+    {
+        document.getElementById("confrimPasswordThis").innerText = "";
+    }
+    });
+</script>
 </body>
 </html>
