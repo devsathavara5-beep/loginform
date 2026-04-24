@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>login form</title>
+</head>
+<body>
+    <!-- username -->
+     <lable>Username</lable><br>
+     <input type="text"pleaceholder="enter username"><br><br>
+
+     <!-- email -->
+     <lable>email</lable><br>
+     <input type="text"pleaceholder="enter email"><br><br>
+
+     <!-- Password -->
+     <lable>Username</lable><br>
+     <input type="text"pleaceholder="enter password"><br><br>
+
+     <!-- mobile-no -->
+     <lable>Mobile-no</lable><br>
+     <input type="text"pleaceholder="enter mobile-no"><br><br>
+
+     <!-- Address -->
+     <lable>Address</lable><br>
+     <input type="text"pleaceholder="enter Address"><br><br>
+
+     <button onclick="Validation()">submit</button>
+</body>
+</html>
